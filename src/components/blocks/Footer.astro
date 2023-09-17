@@ -1,0 +1,76 @@
+---
+import SogamesLogo from '../../assets/partners/sogames_logo.png';
+import WizzLogo from '../../assets/partners/wizz_logo.png';
+---
+
+<footer>
+	<div class='copyright-section'>
+		<p>© Copyright Felis Major 2023</p>
+	</div>
+	<div class='partner-section'>
+		<p>Supported by</p>
+		<div class='partner-logo-container'>
+			<a href='https://www.sogames.org/'
+				><img class='partner-logo' src={SogamesLogo} /></a
+			>
+			<a href='https://www.eurekatech.fr/incubateur-wizz/'
+				><img class='partner-logo' src={WizzLogo} /></a
+			>
+		</div>
+	</div>
+	<slot />
+</footer>
+
+<style lang='scss'>
+	// Imports
+	@import '../../styles/vars/sizing.scss';
+	@import '../../styles/vars/colors.scss';
+	@import '../../styles/mixins.scss';
+
+	footer {
+		// Layout
+		display: flex;
+
+		flex-direction: column-reverse;
+		align-items: center;
+		gap: 1rem;
+
+		@include for-tablet-up {
+			flex-direction: row;
+			align-items: bottom;
+			justify-content: space-between;
+		}
+
+		border-top: 1px solid $base-color-4;
+		padding-top: 0.5rem;
+	}
+
+	p {
+		margin: 0 !important;
+	}
+
+	.copyright-section {
+		display: flex;
+		align-items: start;
+	}
+
+	.partner-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.partner-logo-container {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.partner-logo {
+		@include for-tablet-up {
+			height: 3rem;
+		}
+
+		height: 2rem;
+	}
+</style>

@@ -1,0 +1,17 @@
+---
+const { src, height, position } = Astro.props;
+const imagePath = 'url(' + src + ')';
+---
+
+<div class='banner'></div>
+
+<style lang='scss' define:vars={{ height, imagePath, position }}>
+	.banner {
+		width: 100%;
+		height: var(--height);
+		margin-bottom: 2rem;
+		background-image: var(--imagePath);
+		background-size: cover;
+		background-position: var(--position);
+	}
+</style>

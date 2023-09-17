@@ -1,0 +1,24 @@
+---
+const { bg, height, position } = Astro.props;
+const imagePath = 'url(' + bg + ')';
+---
+
+<div class='ad'>
+	<slot />
+</div>
+
+<style lang='scss' define:vars={{ imagePath, height, position }}>
+	@import '../styles/vars/colors.scss';
+	@import '../styles/vars/sizing.scss';
+
+	.ad {
+		background-color: $base-color-1;
+		color: $content-bg-color;
+		border-radius: $round-lg;
+		padding: 10px;
+		height: var(--height);
+		background-image: var(--imagePath);
+		background-size: cover;
+		background-position: 0% var(--position);
+	}
+</style>

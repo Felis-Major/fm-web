@@ -1,0 +1,32 @@
+---
+import logo from '../../assets/logos/logo_felismajor_text_horizontal.svg';
+---
+
+<header>
+	<a href='/'><img class='logo' src={logo} /></a>
+	<slot />
+</header>
+
+<style lang='scss'>
+	@import '../../styles/vars/sizing.scss';
+	@import '../../styles/vars/colors.scss';
+
+	header {
+		// Layout
+		display: flex;
+		flex-direction: column;
+		background-color: $content-bg-color;
+		padding: $content-spacing;
+		border-radius: $round-lg;
+		gap: $content-spacing;
+	}
+
+	.logo {
+		max-width: 450px;
+		align-self: flex-start;
+		flex-basis: 0;
+		vertical-align: middle;
+		border-radius: $round-lg;
+		margin: 20px;
+	}
+</style>

@@ -1,0 +1,40 @@
+---
+const { image, title } = Astro.props;
+---
+
+<div class='container'>
+	<img class='content-image' src={image} />
+	<div class='content'>
+		<h3 class='title'>{title}</h3>
+		<slot />
+	</div>
+</div>
+
+<style lang='scss'>
+	@import '../../styles/vars/sizing.scss';
+	@import '../../styles/mixins.scss';
+
+	.container {
+		display: flex;
+		justify-content: center;
+
+		flex-direction: column;
+		@include for-tablet-up {
+			flex-direction: row;
+		}
+		margin: 10px auto;
+		gap: 1rem;
+
+		width: 90%;
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+		}
+	}
+
+	.content-image {
+		// border-radius: $round-md;
+	}
+</style>

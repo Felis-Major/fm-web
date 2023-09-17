@@ -1,0 +1,134 @@
+---
+// Import Base Style
+import '../styles/main.scss';
+
+// Import components
+import NavBar from '../components/nav/NavBar.astro';
+import Header from '../components/blocks/Header.astro';
+import Footer from '../components/blocks/Footer.astro';
+import FakeAd from '../components/FakeAd.astro';
+import ad1 from '../assets/ads/gentleman.gif';
+import Newsletter from '../components/Newsletter.astro';
+
+// Config
+const { title } = Astro.props;
+---
+
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<meta name='viewport' content='width=device-width' />
+		<meta name='generator' content={Astro.generator} />
+		<title>Felis Major | {title}</title>
+	</head>
+	<body>
+		<!-- Base Content Container -->
+		<div class='content'>
+			<!-- Page Header -->
+			<Header>
+				<NavBar />
+			</Header>
+
+			<!-- Page Content -->
+			<div class='page-container'>
+				<div class='page-content'>
+					<slot />
+					<Footer />
+				</div>
+				<div class='sidebar-content'>
+					<Newsletter />
+					<!-- <FakeAd height='150px' position='30%' bg={ad1} /> -->
+					<div class='twitter-container'>
+						<a
+							class='twitter-timeline'
+							data-height='250'
+							data-dnt='true'
+							data-theme='dark'
+							href='https://twitter.com/felismajorrr?ref_src=twsrc%5Etfw'
+							>Tweets by felismajorrr</a
+						>
+					</div>
+				</div>
+
+				<!-- Page Footer -->
+			</div>
+		</div>
+	</body>
+
+	<style lang='scss'>
+		@import '../styles/mixins.scss';
+		@import '../styles/vars/sizing.scss';
+		@import '../styles/vars/colors.scss';
+
+		.twitter-container {
+			display: none;
+
+			@include for-tablet-up {
+				display: block;
+			}
+		}
+
+		.content {
+			// Layout
+			display: flex;
+			flex-direction: column;
+			gap: $content-spacing;
+			margin: auto;
+			padding: 0.5rem;
+
+			// Sizing
+			max-width: $content-width;
+
+			@include for-tablet-up {
+				// Layout
+				padding: 1rem;
+			}
+		}
+
+		hr {
+		}
+
+		.page-container {
+			// Layout
+			display: flex;
+			flex-direction: column;
+
+			@include for-tablet-up {
+				flex-direction: row;
+			}
+			gap: $content-spacing;
+		}
+
+		.page-content {
+			// Layout
+			display: flex;
+			flex-direction: column;
+			gap: $page-section-spacing;
+
+			// Sizing
+			padding: 1rem;
+			width: 100%;
+
+			// Colors
+			background-color: $content-bg-color;
+
+			// Misc
+			border-radius: $round-lg;
+		}
+
+		.sidebar-content {
+			display: flex;
+			flex-direction: column;
+			gap: $content-spacing;
+			@include for-tablet-up {
+				flex-basis: 300px;
+			}
+			flex-shrink: 0;
+			flex-grow: 0;
+		}
+	</style>
+</html>
+
+<script async src='https://platform.twitter.com/widgets.js' charset='utf-8'
+></script>

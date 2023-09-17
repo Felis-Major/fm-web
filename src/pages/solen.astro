@@ -1,0 +1,83 @@
+---
+import Banner from '../components/blocks/Banner.astro';
+import ContentBlock from '../components/blocks/ContentBlock.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import banner2 from '../assets/banners/banner2.jpg';
+import banner3 from '../assets/banners/banner3.jpg';
+import Exploration from '../assets/ksp/exploration.png';
+import Investigation from '../assets/ksp/investigation.png';
+import Management from '../assets/ksp/management.png';
+---
+
+<MainLayout title='Solen' showSidebar='true'>
+	<!-- Pitch -->
+	<section class='vertical'>
+		<Banner src={banner2} height='350px' position='center' />
+		<p class='compact'>
+			Solen is a narrative adventure game where you take on the role of a
+			missing hotel manager. Reveal the secrets of the seaside resort while
+			managing the city's iconic establishment.
+		</p>
+		<br />
+		<p class='center'>
+			<span class='highlight'
+				>Solen's hotel awaits you, breakfast and secrets included.</span
+			>
+		</p>
+	</section>
+
+	<!-- KSP -->
+	<section class='vertical'>
+		<p class='note center'>
+			*Note: The game's visuals are still in development.
+		</p>
+		<ContentBlock image={Investigation} title='Investigation'>
+			<p>
+				Investigate the hotel managers's disappearance and dive into a
+				mysterious plot. Depending on your relationships and skills, unveil the
+				secrets surrounding the seaside town.
+			</p>
+		</ContentBlock>
+		<ContentBlock image={Exploration} title='Exploration'>
+			<p>
+				Delve into every nook and hidden area of the seaside resort to uncover
+				crucial clues for your investigation and essential resources for your
+				hotel.
+			</p>
+		</ContentBlock>
+		<ContentBlock image={Management} title='Management'>
+			<p>
+				Take control of the day-to-day operations of the establishment, welcome
+				new spirits, manage resources, and restore various services and rooms to
+				satisfy your customers.
+			</p>
+		</ContentBlock>
+	</section>
+
+	<!-- Story -->
+	<section class='vertical'>
+		<Banner src={banner3} height='350px' position='top' />
+		<div class=''>
+			<h3 class='title'>Solen's world</h3>
+			<p>
+				Following a car breakdown, you find yourself forced to spend the night
+				in a <span class='highlight'>mysterious seaside resort</span>.
+			</p>
+
+			<p>
+				Unable to leave immediately, you are unexpectedly offered an
+				opportunity: <span class='highlight'
+					>to take the place of the hotel manager</span
+				> who disappeared a few days ago...
+			</p>
+
+			<p>
+				To find a way back home, you'll need to <span class='highlight'
+					>unravel the mysteries</span
+				> of the resort and <span class='highlight'>solve the enigma</span> surrounding
+				the former manager's disappearance, all while managing the iconic establishment
+				of the town.
+			</p>
+		</div>
+	</section>
+</MainLayout>

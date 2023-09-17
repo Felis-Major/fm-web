@@ -1,0 +1,123 @@
+---
+import twitterLogo from '../../assets/socials/logo_twitter.svg';
+import instagramLogo from '../../assets/socials/logo_insta.svg';
+// Config
+const navLinks = [
+	{ title: 'About', target: '/' },
+	{ title: 'Solen', target: '/solen' },
+	{ title: 'Contact', target: '/contact' },
+];
+---
+
+<nav>
+	<!-- Links -->
+	<ul class='navlinks-container'>
+		{
+			navLinks.map((x) => (
+				<li class='navlink'>
+					<a href={x.target}>{x.title}</a>
+				</li>
+			))
+		}
+	</ul>
+
+	<!-- Socials -->
+	<div class='socials-container'>
+		<a class='social-link' href='https://twitter.com/felismajorrr'
+			><img src={twitterLogo} /></a
+		>
+		<a class='social-link' href='https://www.instagram.com/felismajorrr/'
+			><img src={instagramLogo} /></a
+		>
+	</div>
+</nav>
+
+<style lang='scss'>
+	@import '../../styles/vars/sizing.scss';
+	@import '../../styles/vars/colors.scss';
+	@import '../../styles/mixins.scss';
+
+	nav {
+		// Layout
+		display: flex;
+		flex-direction: row;
+
+		justify-content: center;
+
+		@include for-tablet-up {
+			justify-content: space-between;
+		}
+
+		// Sizing
+		height: 2.5rem;
+		width: 100%;
+
+		// Colors
+		background: $base-color-1;
+
+		// Misc
+		border-radius: $round-lg;
+		overflow: hidden;
+	}
+
+	@mixin container() {
+		display: flex;
+	}
+
+	.navlinks-container {
+		@include container();
+
+		width: 100%;
+		justify-content: space-evenly;
+
+		@include for-tablet-up {
+			width: fit-content;
+		}
+
+		list-style: none;
+	}
+
+	.socials-container {
+		display: none;
+
+		@include for-tablet-up {
+			@include container();
+			align-items: center;
+			$spacing: 5px;
+			gap: $spacing;
+			margin-right: $spacing;
+		}
+	}
+
+	.navlink {
+		@include for-tablet-up {
+			border-right: 1px solid $base-color-2;
+		}
+
+		a {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			padding: 1rem;
+			color: $content-bg-color;
+			font-weight: bold;
+		}
+
+		a:hover {
+			background-color: $base-color-3;
+		}
+	}
+
+	.social-link {
+		width: 2rem;
+		height: 2rem;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+</style>

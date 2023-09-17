@@ -1,0 +1,42 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import LetterIcon from '../assets/mail.svg';
+---
+
+<MainLayout title='Contact' showSidebar='true'>
+	<!-- Email -->
+	<section>
+		<div class='container'>
+			<img src={LetterIcon} />
+			<a href='mailto:contact@felismajor.com'>contact@felismajor.com</a>
+		</div>
+	</section>
+</MainLayout>
+
+<style lang='scss'>
+	@import '../styles/mixins.scss';
+
+	section {
+		height: 100%;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		gap: 2rem;
+		justify-content: center;
+		align-items: center;
+		img {
+			width: 3rem;
+		}
+	}
+
+	a {
+		@include for-tablet-up {
+			font-size: 2rem;
+		}
+
+		font-size: 1.2rem;
+	}
+</style>

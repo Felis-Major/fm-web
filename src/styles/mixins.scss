@@ -1,0 +1,21 @@
+// Imports
+@import './vars/breakpoints.scss';
+
+// Mixins
+@mixin for-phone-only {
+	@media (max-width: $phone) {
+		@content;
+	}
+}
+
+@mixin for-tablet-up {
+	@media (min-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin for-desktop-up {
+	@media (min-width: $desktop) {
+		@content;
+	}
+}
