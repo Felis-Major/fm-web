@@ -1,76 +1,88 @@
 ---
-import SogamesLogo from '../../assets/partners/sogames_logo.png';
-import WizzLogo from '../../assets/partners/wizz_logo.png';
+import SogamesLogo from "../../assets/partners/sogames_logo.png";
+import WizzLogo from "../../assets/partners/wizz_logo.png";
+import GameOnlyLogo from "../../assets/partners/game_only.png";
+import GameCrealabLogo from "../../assets/partners/game_crealab.svg";
+import CNCLogo from "../../assets/partners/cnc.png";
 ---
 
 <footer>
-	<div class='copyright-section'>
-		<p>© Copyright Felis Major 2023</p>
-	</div>
-	<div class='partner-section'>
-		<p>Supported by</p>
-		<div class='partner-logo-container'>
-			<a href='https://www.sogames.org/'
-				><img class='partner-logo' src={SogamesLogo} /></a
-			>
-			<a href='https://www.eurekatech.fr/incubateur-wizz/'
-				><img class='partner-logo' src={WizzLogo} /></a
-			>
-		</div>
-	</div>
-	<slot />
+  <div class="copyright-section">
+    <p>© Copyright Felis Major {new Date().getFullYear()}</p>
+  </div>
+  <div class="partner-section">
+    <p>Supported by</p>
+    <div class="partner-logo-container">
+      <a href="https://www.sogames.org/">
+        <img class="partner-logo" src={SogamesLogo} />
+      </a>
+      <a href="https://www.eurekatech.fr/incubateur-wizz/">
+        <img class="partner-logo" src={WizzLogo} />
+      </a>
+      <a href="https://gameonly.org/">
+        <img class="partner-logo" src={GameOnlyLogo} />
+      </a>
+      <a href="https://gamecrealab.com/">
+        <img class="partner-logo" src={GameCrealabLogo} />
+      </a>
+      <a href="https://www.cnc.fr/">
+        <img class="partner-logo" src={CNCLogo} />
+      </a>
+    </div>
+  </div>
+  <slot />
 </footer>
 
-<style lang='scss'>
-	// Imports
-	@import '../../styles/vars/sizing.scss';
-	@import '../../styles/vars/colors.scss';
-	@import '../../styles/mixins.scss';
+<style lang="scss">
+  // Imports
+  @import "../../styles/vars/sizing.scss";
+  @import "../../styles/vars/colors.scss";
+  @import "../../styles/mixins.scss";
 
-	footer {
-		// Layout
-		display: flex;
+  footer {
+    // Layout
+    display: flex;
 
-		flex-direction: column-reverse;
-		align-items: center;
-		gap: 1rem;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
 
-		@include for-tablet-up {
-			flex-direction: row;
-			align-items: bottom;
-			justify-content: space-between;
-		}
+    @include for-tablet-up {
+      flex-direction: row;
+      align-items: bottom;
+      justify-content: space-between;
+    }
 
-		border-top: 1px solid $base-color-4;
-		padding-top: 0.5rem;
-	}
+    border-top: 1px solid $base-color-4;
+    padding-top: 0.5rem;
+  }
 
-	p {
-		margin: 0 !important;
-	}
+  p {
+    margin: 0 !important;
+  }
 
-	.copyright-section {
-		display: flex;
-		align-items: start;
-	}
+  .copyright-section {
+    display: flex;
+    align-items: start;
+  }
 
-	.partner-section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.5rem;
-	}
+  .partner-section {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 0.5rem;
+  }
 
-	.partner-logo-container {
-		display: flex;
-		gap: 0.5rem;
-	}
+  .partner-logo-container {
+    display: flex;
+    gap: 1rem;
+  }
 
-	.partner-logo {
-		@include for-tablet-up {
-			height: 3rem;
-		}
+  .partner-logo {
+    @include for-tablet-up {
+      height: 2rem;
+    }
 
-		height: 2rem;
-	}
+    height: 2em;
+  }
 </style>

@@ -1,48 +1,46 @@
 ---
-import Banner from '../components/blocks/Banner.astro';
-import TeamCard from '../components/blocks/TeamCard.astro';
-import MainLayout from '../layouts/MainLayout.astro';
-import banner1 from '../assets/banners/banner1.jpg';
-import Suzanne from '../assets/team/suzanne.jpg';
+import Banner from "../components/blocks/Banner.astro";
+import TeamCard from "../components/blocks/TeamCard.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import banner1 from "../assets/banners/banner1.jpg";
+import Suzanne from "../assets/team/suzanne.jpg";
 ---
 
-<MainLayout title='Home' showSidebar='true'>
-	<!-- Intro -->
-	<section class='vertical'>
-		<Banner src={banner1} height='400px' position='top' />
-		<p>
-			<span class='highlight'>Felis Major</span> is an independent video game studio
-			(currently in development) that is creating its debut commercial game, <span
-				class='highlight'><i>Solen</i></span
-			>.
-		</p>
-		<p>
-			Solen is a <span class='highlight'>narrative adventure game</span> with <span
-				class='highlight'>investigative elements</span
-			> set in a seaside resort for spirits.
-		</p>
-		<p>
-			Their inspiration stems from the nostalgia of video games and forums from
-			the 2000s, evoking an eerie and mysterious atmosphere.
-		</p>
-	</section>
+<MainLayout title="Home" showSidebar="true">
+  <!-- Intro -->
+  <section class="vertical">
+    <Banner src={banner1} height="400px" position="top" />
+    <p>
+      <span class="highlight">Felis Major</span> is an independent video game studio
+      (currently in development) creating its first commercial game,<span
+        class="highlight"
+      >
+        <a href="/solen">Solen</a>
+      </span>🐚, a <span class="highlight">narrative mystery adventure</span> set
+      in a haunted seaside resort.
+    </p>
+    <p>
+      Their inspiration stems from the nostalgia of video games and forums from
+      the 2000s, evoking an eerie and mysterious atmosphere.
+    </p>
+  </section>
 
-	<!-- Team -->
-	<section class='horizontal flex-center'>
-		<TeamCard
-			name='Suzanne Clemente'
-			title='Game Designer / Writer'
-			pronouns='she/they'
-			portrait={Suzanne}
-			handle='suzipatchi'
-		/>
+  <!-- Team -->
+  <section class="horizontal flex-center">
+    <TeamCard
+      name="Suzanne Clemente"
+      title="Game Designer / Writer"
+      pronouns="she/they"
+      portrait={Suzanne}
+      handle="suzipatchi"
+    />
 
-		<TeamCard
-			name='Robert Edilber'
-			title='Programmer / 3D Artist'
-			pronouns='he/him'
-			portrait='https://placehold.co/200x250'
-			handle='rsedilber'
-		/>
-	</section>
+    <TeamCard
+      name="Robert Edilber"
+      title="Programmer / 3D Artist"
+      pronouns="he/him"
+      portrait="https://placehold.co/200x250"
+      handle="rsedilber"
+    />
+  </section>
 </MainLayout>

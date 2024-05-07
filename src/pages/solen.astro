@@ -1,83 +1,92 @@
 ---
-import Banner from '../components/blocks/Banner.astro';
-import ContentBlock from '../components/blocks/ContentBlock.astro';
-import MainLayout from '../layouts/MainLayout.astro';
-import banner2 from '../assets/banners/banner2.jpg';
-import banner3 from '../assets/banners/banner3.jpg';
-import Exploration from '../assets/ksp/exploration.png';
-import Investigation from '../assets/ksp/investigation.png';
-import Management from '../assets/ksp/management.png';
+import Banner from "../components/blocks/Banner.astro";
+import ContentBlock from "../components/blocks/ContentBlock.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import banner2 from "../assets/banners/banner2.jpg";
+import banner3 from "../assets/banners/banner3.jpg";
+import Exploration from "../assets/ksp/exploration.png";
+import Investigation from "../assets/ksp/investigation.png";
+import Management from "../assets/ksp/management.png";
 ---
 
-<MainLayout title='Solen' showSidebar='true'>
-	<!-- Pitch -->
-	<section class='vertical'>
-		<Banner src={banner2} height='350px' position='center' />
-		<p class='compact'>
-			Solen is a narrative adventure game where you take on the role of a
-			missing hotel manager. Reveal the secrets of the seaside resort while
-			managing the city's iconic establishment.
-		</p>
-		<br />
-		<p class='center'>
-			<span class='highlight'
-				>Solen's hotel awaits you, breakfast and secrets included.</span
-			>
-		</p>
-	</section>
+<MainLayout title="Solen" showSidebar="true">
+  <!-- Pitch -->
+  <section class="vertical">
+    <Banner src={banner2} height="350px" position="center" />
+    <p class="compact">
+      Solen is a narrative mystery adventure game where you take on the role of
+      a missing hotel manager. Reveal the secrets of the seaside resort while
+      managing the city's iconic establishment.
+    </p>
+    <br />
+    <p class="center">
+      <span class="highlight">
+        Solen's hotel awaits you, breakfast and secrets included.
+      </span>
+    </p>
+  </section>
 
-	<!-- KSP -->
-	<section class='vertical'>
-		<p class='note center'>
-			*Note: The game's visuals are still in development.
-		</p>
-		<ContentBlock image={Investigation} title='Investigation'>
-			<p>
-				Investigate the hotel managers's disappearance and dive into a
-				mysterious plot. Depending on your relationships and skills, unveil the
-				secrets surrounding the seaside town.
-			</p>
-		</ContentBlock>
-		<ContentBlock image={Exploration} title='Exploration'>
-			<p>
-				Delve into every nook and hidden area of the seaside resort to uncover
-				crucial clues for your investigation and essential resources for your
-				hotel.
-			</p>
-		</ContentBlock>
-		<ContentBlock image={Management} title='Management'>
-			<p>
-				Take control of the day-to-day operations of the establishment, welcome
-				new spirits, manage resources, and restore various services and rooms to
-				satisfy your customers.
-			</p>
-		</ContentBlock>
-	</section>
+  <!-- KSP -->
+  <section class="vertical">
+    <p class="note center">
+      *Note: The game's visuals are still in development.
+    </p>
+    <ContentBlock image={Investigation} title="Become a hotel manager">
+      <p>
+        Organize your days to meet the needs of your spectral clientele. Tend to
+        the boiler room, unveil new services, unlock additional floors...
+        There's plenty on your plate and only so much time in the day, so choose
+        your actions wisely! Engaging in certain hotel tasks may yield
+        surprises, unveiling clues or triggering special events with resort
+        residents.
+      </p>
+    </ContentBlock>
+    <ContentBlock image={Exploration} title="Conduct an investigation">
+      <p>
+        Eager to escape, you've realized your car won't cut it. Luckily, you
+        found the ex-hotel manager's journal, hinting at an escape plan. The
+        only problem is, the pages are faded, and you need to earn Spectral Ink
+        by dealing with the spirits in your hotel. Follow the clues in your
+        journal, build connections, explore various areas.
+      </p>
+    </ContentBlock>
+    <ContentBlock image={Management} title="Uncover the secrets">
+      <p>
+        The cozy tourist retreat vibe quickly fades as suspicion grows within
+        you. Something's amiss, and to find a way out, you'll need to unpack and
+        adapt to this new life. Immerse yourself in the community, delve into
+        the city's past, folklore and events—all fair game for gathering crucial
+        information! On your journey, unexpected friendships may form, yet they
+        may also bring to light dark secrets.
+      </p>
+    </ContentBlock>
+  </section>
 
-	<!-- Story -->
-	<section class='vertical'>
-		<Banner src={banner3} height='350px' position='top' />
-		<div class=''>
-			<h3 class='title'>Solen's world</h3>
-			<p>
-				Following a car breakdown, you find yourself forced to spend the night
-				in a <span class='highlight'>mysterious seaside resort</span>.
-			</p>
+  <!-- Story -->
+  <section class="vertical">
+    <Banner src={banner3} height="350px" position="top" />
+    <div class="">
+      <h3 class="title">Solen's world — A seaside mystery adventure</h3>
+      <p>
+        Following a car breakdown, you find yourself forced to spend the night
+        in a <span class="highlight">mysterious seaside resort</span>.
+      </p>
 
-			<p>
-				Unable to leave immediately, you are unexpectedly offered an
-				opportunity: <span class='highlight'
-					>to take the place of the hotel manager</span
-				> who disappeared a few days ago...
-			</p>
+      <p>
+        Unable to leave immediately, you are unexpectedly offered an
+        opportunity: <span class="highlight">
+          to take the place of the hotel manager
+        </span> who disappeared a few days ago...
+      </p>
 
-			<p>
-				To find a way back home, you'll need to <span class='highlight'
-					>unravel the mysteries</span
-				> of the resort and <span class='highlight'>solve the enigma</span> surrounding
-				the former manager's disappearance, all while managing the iconic establishment
-				of the town.
-			</p>
-		</div>
-	</section>
+      <p>
+        To find a way back home, you'll need to <span class="highlight">
+          unravel the mysteries
+        </span> of the resort and <span class="highlight">
+          solve the enigma
+        </span> surrounding the former manager's disappearance, all while managing
+        the iconic establishment of the town.
+      </p>
+    </div>
+  </section>
 </MainLayout>

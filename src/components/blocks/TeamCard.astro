@@ -2,34 +2,36 @@
 const { name, title, handle, portrait } = Astro.props;
 ---
 
-<div class='container'>
-	<h3>{name}</h3>
-	<h4>{title}</h4>
-	<!-- <img src={portrait} /> -->
-	<a
-		href={'https://twitter.com/' + handle + '?ref_src=twsrc%5Etfw'}
-		class='twitter-follow-button'
-		data-dnt='true'
-		data-show-count='false'>Follow @felismajorrr</a
-	>
+<div class="container">
+  <h3>{name}</h3>
+  <h4>{title}</h4>
+  <!-- <img src={portrait} /> -->
+  <a
+    href={"https://twitter.com/" + handle + "?ref_src=twsrc%5Etfw"}
+    class="twitter-follow-button"
+    data-dnt="true"
+    data-show-count="false"
+  >
+    Follow @felismajorrr
+  </a>
 </div>
 
-<style lang='scss'>
-	h3 {
-		margin: 0px !important;
-	}
+<style lang="scss">
+  h3 {
+    margin: 0px !important;
+  }
 
-	h4 {
-		font-weight: normal;
-	}
+  h4 {
+    font-weight: normal;
+  }
 
-	.container {
-		display: flex;
-		flex-direction: column;
-		width: 200px;
-		padding: 10px;
-		gap: 5px;
-	}
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px;
+    gap: 5px;
+  }
 </style>
-<script async src='https://platform.twitter.com/widgets.js' charset='utf-8'
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"
 ></script>
