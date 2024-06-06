@@ -2,8 +2,7 @@
 import Banner from "../components/blocks/Banner.astro";
 import ContentBlock from "../components/blocks/ContentBlock.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import banner2 from "../assets/banners/banner2.jpg";
-import banner3 from "../assets/banners/banner3.jpg";
+// import banner4 from "../assets/banners/banner4.png";
 import Exploration from "../assets/ksp/exploration.png";
 import Investigation from "../assets/ksp/investigation.png";
 import Management from "../assets/ksp/management.png";
@@ -12,11 +11,9 @@ import Management from "../assets/ksp/management.png";
 <MainLayout title="Solen" showSidebar="true">
   <!-- Pitch -->
   <section class="vertical">
-    <Banner src={banner2} height="350px" position="center" />
+    <!-- <Banner src={banner4} height="350px" position="center" /> -->
     <p class="compact">
-      Solen is a narrative adventure where you take on the role of
-      a missing hotel manager. Reveal the secrets of the seaside resort while
-      managing the city's iconic establishment.
+      Solen is a narrative adventure where you take the role of a hotel manager in a haunted seaside resort. Unravel the enigmatic disappearance of your predecessor, while overseeing hotel operations.
     </p>
     <br />
     <p class="center">
@@ -32,60 +29,32 @@ import Management from "../assets/ksp/management.png";
       *Note: The game's visuals are still in development.
     </p>
 
-    <ContentBlock image={Investigation} title="Conduct an investigation">
+    <ContentBlock image={Investigation} title="A Mysterious Detour">
       <p>
-        Eager to escape, you've realized your car won't cut it. Luckily, you
-        found the ex-hotel manager's journal, hinting at an escape plan. The
-        only problem is, the pages are faded, and you need to earn Spectral Ink
-        by dealing with the spirits in your hotel. Follow the clues in your journal, build connections, explore various areas and unlock hidden rooms in the hotel...
+        Your journey takes an unexpected turn when your car breaks down, forcing you to seek shelter for the night in a peculiar seaside resort. Unable to depart immediately, you are surprisingly offered the opportunity to step into the shoes of the hotel's previous manager, who vanished just days ago. To find your way home, you must unravel the enigmatic circumstances surrounding the former manager's disappearance while simultaneously overseeing the hotel's operations.
+
+
       </p> 
     </ContentBlock>
 
-    <ContentBlock image={Management} title="Become a hotel manager">
+    <ContentBlock image={Management} title="An Investigative Endeavor">
       <p>
-        To earn the precious Spectral Ink, you'll have no choice but to look after your otherworldly guests. Fulfill their requests, manage facilities like the restaurant and baths, maintain the boiler room... With a plethora of tasks and limited time in a day, choose how to spend your day between tending to your establishment and plotting your escape.
+        Gradually, you discover pages from the former hotel manager's journal, realizing with growing unease that your arrival mirrors their unsettling experience. Scour every corner for clues, build connections with the locals, explore the resort's various sites, and decipher the hotel's most guarded secrets as you piece together the journal's cryptic entries.
       </p>
     </ContentBlock>
 
-    <ContentBlock image={Exploration} title="Uncover the secrets">
+    <ContentBlock image={Exploration} title="Stepping into the Manager's Shoes">
       <p>
-        The cozy tourist retreat vibe quickly fades as suspicion grows within
-        you. Something's amiss, and to find a way out, you'll need to unpack and
-        adapt to this new life. Immerse yourself in the community, delve into
-        the city's past, folklore and events—all fair game for gathering crucial
-        information! On your journey, unexpected friendships may form, yet they
-        may also bring to light dark secrets.
+        Despite your desire to leave and explore for an escape, you quickly realize that you must work at the hotel if you don't want to disappear... Earn quotas by taking care of your otherworldly guests: responding to their requests, managing facilities like the restaurant and baths, maintaining the boiler room, and more. Only after amassing enough quotas can you venture out to seek a path back home.
       </p>
     </ContentBlock>
 
-  </section>
-
-  <!-- Story -->
-  <section class="vertical">
-    <Banner src={banner3} height="350px" position="top" />
-    <div class="">
-      <h3 class="title">Solen's world — A seaside mystery adventure</h3>
+    <ContentBlock image={Exploration} title="Uncovering Sinister Secrets">
       <p>
-        Following a car breakdown, you find yourself forced to spend the night
-        in a <span class="highlight">mysterious seaside resort</span>.
+        What initially seemed like a cozy tourist retreat soon takes on a more ominous tone as suspicion grows within you. To find your way out, you must adapt to this new reality and immerse yourself in the community, delving into the city's past, rituals, folklore, and events – no stone can be left unturned in your pursuit of crucial information. Along the way, unexpected friendships may form, but they could also shed light on dark secrets better left buried.
       </p>
+    </ContentBlock>
 
-      <p>
-        Unable to leave immediately, you are unexpectedly offered an
-        opportunity: <span class="highlight">
-          to take the place of the hotel manager
-        </span> who disappeared a few days ago...
-      </p>
-
-      <p>
-        To find a way back home, you'll need to <span class="highlight">
-          unravel the mysteries
-        </span> of the resort and <span class="highlight">
-          solve the enigma
-        </span> surrounding the former manager's disappearance, all while managing
-        the iconic establishment of the town.
-      </p>
-    </div>
   </section>
 </MainLayout>
 
