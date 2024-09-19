@@ -2,7 +2,8 @@
 import Banner from "../components/blocks/Banner.astro";
 import ContentBlock from "../components/blocks/ContentBlock.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-// import banner4 from "../assets/banners/banner4.png";
+import banner4 from "../assets/banners/banner4.png";
+import banner3 from "../assets/banners/banner3.png";
 import Exploration from "../assets/ksp/exploration.png";
 import Investigation from "../assets/ksp/investigation.png";
 import Management from "../assets/ksp/management.png";
@@ -11,9 +12,9 @@ import Management from "../assets/ksp/management.png";
 <MainLayout title="Solen" showSidebar="true">
   <!-- Pitch -->
   <section class="vertical">
-    <!-- <Banner src={banner4} height="350px" position="center" /> -->
+    <Banner src={banner4} height="400px" position="center" />
     <p class="compact">
-      Solen is a narrative adventure where you take the role of a hotel manager in a haunted seaside resort. Unravel the enigmatic disappearance of your predecessor, while overseeing hotel operations.
+      Solen is a narrative adventure where you take the role of a hotel manager in a haunted seaside resort. Uncover the truth about the spirits' origins and the fate of the previous manager, while overseeing hotel operations.
     </p>
     <br />
     <p class="center">
@@ -29,31 +30,30 @@ import Management from "../assets/ksp/management.png";
       *Note: The game's visuals are still in development.
     </p>
 
-    <ContentBlock image={Investigation} title="A Mysterious Detour">
+    <ContentBlock image={Investigation} title="Become a hotel manager">
       <p>
-        Your journey takes an unexpected turn when your car breaks down, forcing you to seek shelter for the night in a peculiar seaside resort. Unable to depart immediately, you are surprisingly offered the opportunity to step into the shoes of the hotel's previous manager, who vanished just days ago. To find your way home, you must unravel the enigmatic circumstances surrounding the former manager's disappearance while simultaneously overseeing the hotel's operations.
+        You accept a job as a hotel manager in a small seaside resort, only to realize that it is haunted and your guests are... Spirits! Take care of your ghostly clients: fulfill their requests by opening new services or find what they're asking for by fishing, gardening, and more. Keep the hotel running smoothly with day-to-day tasks, from delivering room service to cleaning and repairing broken items.
 
 
       </p> 
     </ContentBlock>
 
-    <ContentBlock image={Management} title="An Investigative Endeavor">
+    <ContentBlock image={Management} title="Conduct an investigation">
       <p>
-        Gradually, you discover pages from the former hotel manager's journal, realizing with growing unease that your arrival mirrors their unsettling experience. Scour every corner for clues, build connections with the locals, explore the resort's various sites, and decipher the hotel's most guarded secrets as you piece together the journal's cryptic entries.
+        Just when you've settled in, you find a note suggesting that the previous manager may not have resigned as everyone believes and that something might have happened to him.
+
+        You decide to investigate while helping the locals with their problems. Some are wary of you at first, but as you assist them and become part of the community, you gradually get closer to uncovering the sinister truth about what’s really happening here.
       </p>
     </ContentBlock>
 
-    <ContentBlock image={Exploration} title="Stepping into the Manager's Shoes">
+    <ContentBlock image={Exploration} title="Begin a new life">
       <p>
-        Despite your desire to leave and explore for an escape, you quickly realize that you must work at the hotel if you don't want to disappear... Earn quotas by taking care of your otherworldly guests: responding to their requests, managing facilities like the restaurant and baths, maintaining the boiler room, and more. Only after amassing enough quotas can you venture out to seek a path back home.
+        Settle into a cozy seaside life, surrounded by dark secrets. Befriend the locals and delve into the city's past and folklore — everything is fair game for gathering crucial information. After all, this is your home now.
       </p>
     </ContentBlock>
+    <br>
 
-    <ContentBlock image={Exploration} title="Uncovering Sinister Secrets">
-      <p>
-        What initially seemed like a cozy tourist retreat soon takes on a more ominous tone as suspicion grows within you. To find your way out, you must adapt to this new reality and immerse yourself in the community, delving into the city's past, rituals, folklore, and events – no stone can be left unturned in your pursuit of crucial information. Along the way, unexpected friendships may form, but they could also shed light on dark secrets better left buried.
-      </p>
-    </ContentBlock>
+    <Banner src={banner3} height="400px" position="center" />
 
   </section>
 </MainLayout>
