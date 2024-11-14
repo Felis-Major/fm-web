@@ -1,5 +1,5 @@
 ---
-const { name, title, handle, portrait } = Astro.props;
+const { name, title, link, portrait, linkName } = Astro.props;
 ---
 
 <div class="container">
@@ -7,12 +7,9 @@ const { name, title, handle, portrait } = Astro.props;
   <h4>{title}</h4>
   <!-- <img src={portrait} /> -->
   <a
-    href={"https://twitter.com/" + handle + "?ref_src=twsrc%5Etfw"}
-    class="twitter-follow-button"
-    data-dnt="true"
-    data-show-count="false"
+    href={link}
   >
-    Follow @felismajorrr
+  {linkName} 
   </a>
 </div>
 
@@ -33,5 +30,3 @@ const { name, title, handle, portrait } = Astro.props;
     gap: 5px;
   }
 </style>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"
-></script>
