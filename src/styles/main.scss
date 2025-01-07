@@ -47,6 +47,7 @@ h3 {
 .compact {
 	width: 100%;
 	text-align: justify;
+
 	@include for-tablet-up {
 		margin: auto;
 		width: 60%;
@@ -83,7 +84,7 @@ h3 {
 
 .highlight {
 	font-weight: bold;
-	color: $accent-color-6;
+	// color: $accent-color-6;
 }
 
 a {
