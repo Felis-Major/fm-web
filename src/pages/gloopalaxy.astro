@@ -1,51 +1,76 @@
 ---
 import ContentBlock from "../components/blocks/ContentBlock.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import Banner from "../components/blocks/Banner.astro";
+import Gloopalaxy1 from "../assets/banners/gloopalaxy1.png";
+
 ---
 
 <MainLayout title="Gloopalaxy" showSidebar="true">
-  <!-- Pitch -->
-  <section class="vertical">
-    <!-- <Banner src={banner4} height="400px" position="center" /> -->
-    <p class="compact">
-      Build and manage your own space aquarium in this tiny management game. Explore different planets to collect all alien sea creatures, customize and expand your aquarium, and ensure that your visitors and creatures are happy to progress through various missions.
-    </p>
-    <br />
-    <p class="center">
-      <!-- <span class="highlight">
-        Solen's hotel awaits you, breakfast and secrets included.
-      </span> -->
-    </p>
-  </section>
 
-  <!-- KSP -->
+  <Banner src={Gloopalaxy1} height="400px" position="center" />
+
+  <section class="vertical">
+    <p class="compact">
+      Run your own space aquarium in this tiny, light management and creature collection game. Collect strange aquatic creatures from outer space called <b>gloops</b>, and create ecosystems for them to thrive in. Take care of your visitors, coming in from every corner of the universe to admire your aquarium!<p>
+      
+  </section>
   <section class="vertical">
     <p class="note center">
-      *Note: More informations coming soon.
-    </p>
+      [The game is still in early development, and most of the visuals are subject to change.]    </p>
 
-    <!-- <ContentBlock image={Investigation} title="Become a hotel manager">
+      <div id="contenedor">
+        <iframe src="https://store.steampowered.com/widget/3496970/" frameborder="0" width="646" height="190"></iframe>
+    </div>
+    
+    <style type="text/css">
+        #contenedor {
+            display: flex;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            justify-content: center;
+            align-items: center;
+            height: 190px; /* Hauteur égale à celle de l'iframe */
+            width: 100%; /* Prend toute la largeur disponible */
+        }
+  
+    </style>
+    
+<br>
+<br>
+    <ContentBlock title="🚀 Explore the galaxy and uncover its secrets">
       <p>
-        You accept a job as a hotel manager in a small seaside resort, only to realize that it is haunted and your only guests are... spirits! Take care of your ghostly clients: fulfill their requests by opening the restaurant or find what they're asking for by fishing, gardening, and more. Keep the hotel running smoothly with day-to-day tasks, from delivering room service to cleaning and repairing broken items.
+        Discover and explore new worlds, each revealing unique creatures. Bring back rare objects and materials to customize your aquarium, and capture new <b>gloops</b> with your remote fishing device. You may even get lucky and bring back <b><i>shiny ones</i></b> ✨
 
       </p> 
     </ContentBlock>
 
-    <ContentBlock image={Management} title="Conduct an investigation">
+    <ContentBlock title="🐠 Study and take care of your gloops">
       <p>
-        Just as you settle in, you discover a note suggesting that the previous manager may not have merely resigned as everyone believes — something may have happened to him. You decide to investigate, but the path to the truth is difficult to reach. To move forward, you'll need to assist the locals with their issues and strengthen your relationships with them, while also familiarizing yourself with your surroundings to uncover clues and secrets.
+        Each creature has unique preferences. Place them in various tanks, experiment with their environment, and fill your encyclopedia with all there is to know about them!
       </p>
     </ContentBlock>
 
-    <ContentBlock image={Exploration} title="Begin a new life">
+    <ContentBlock title="🪸 Customize your aquarium">
       <p>
-        Settle into a cozy seaside life filled with dark secrets. Each day, you'll go through phases of management, exploration, and social gatherings. Manage your schedule and free time wisely, foster relationships with the locals, and delve into the city's past and folklore...
+        While looking for creatures, you may find new decorations and materials to customize your aquarium. Build new rooms, change the colors and place items to make it look just right!
       </p>
     </ContentBlock>
     <br>
 
-    <Banner src={banner3} height="400px" position="center" /> -->
+    <ContentBlock title="👽 Welcome intergalactic visitors">
+      <p>
+        Visitors from the whole galaxy will come to admire your creatures, so make sure that they get what they're paying for! Adjust the ticket price, and open your aquarium for the day!
+      </p>
+    </ContentBlock>
+    <br>
+
+    <ContentBlock title="✨ Meet your objectives">
+      <p>
+        Each mission brings new creatures, new planets and more! Fill your encyclopedia, make money and drive visitor satisfaction up to unlock them all.
+      </p>
+    </ContentBlock>
+    <br>
 
   </section>
 </MainLayout>
-
